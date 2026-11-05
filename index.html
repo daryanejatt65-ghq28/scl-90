@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#6c4cf1"><link rel="apple-touch-icon" href="icon-192.png"><title>آزمون SCL-90-R</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#f1f0ff;--bgi:linear-gradient(160deg,#ece6ff,#e2f5ff 55%,#fff0f6);--card:#fff;--tx:#241b4b;--mut:#6b6591;--bd:#e0dcf7;--p:#6c4cf1;--ok:#12a679;--warn:#f08c00;--bad:#e03131}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17132e;--bgi:#17132e;--card:#211b43;--tx:#f0ecff;--mut:#b2abd8;--bd:#382f68;--p:#a994ff;--ok:#38d9a9;--warn:#ffa94d;--bad:#ff8787}}
+:root[data-theme="dark"]{--bg:#17132e;--bgi:#17132e;--card:#211b43;--tx:#f0ecff;--mut:#b2abd8;--bd:#382f68;--p:#a994ff;--ok:#38d9a9;--warn:#ffa94d;--bad:#ff8787}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg) var(--bgi) fixed;color:var(--tx);font:400 16px/1.9 Vazirmatn,Tahoma,sans-serif}
+main{max-width:820px;margin:0 auto;padding:14px}
+h2{font-size:19px;font-weight:800;margin:0 0 6px}h3{font-size:16px;font-weight:600;margin:16px 0 6px}p{margin:6px 0}.mut{color:var(--mut);font-size:14px}.cap{font-size:12.5px;color:var(--mut)}
+.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 12% 20%,rgba(255,255,255,.28) 0 28px,transparent 29px),radial-gradient(circle at 88% 80%,rgba(255,255,255,.22) 0 46px,transparent 47px),radial-gradient(circle at 70% 15%,rgba(255,235,120,.5) 0 14px,transparent 15px),linear-gradient(135deg,#6c4cf1,#ff5fa2 60%,#ff9f43);color:#fff;border-radius:26px;padding:26px 22px;margin:6px 0 12px;box-shadow:0 14px 30px -14px rgba(108,76,241,.8)}
+.hero h1{margin:0;font-size:26px;font-weight:800;line-height:1.5}.hero p{margin:2px 0 0;opacity:.95;font-size:14.5px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:22px;padding:18px;margin:14px 0;box-shadow:0 10px 24px -18px rgba(70,40,160,.7)}
+.pg{border-top:6px solid var(--p)}
+label.f{display:block;font-size:14px;color:var(--mut);margin:8px 0 2px}
+input[type=text],input[type=number],select,textarea{width:100%;font:inherit;padding:10px 12px;border:2px solid var(--bd);border-radius:14px;background:var(--bg);color:var(--tx)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--p)}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.gr{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+button{font:inherit;cursor:pointer}
+.btn{background:linear-gradient(135deg,#6c4cf1,#ff5fa2);color:#fff;border:0;border-radius:16px;padding:12px 24px;font-weight:600;box-shadow:0 8px 16px -8px rgba(108,76,241,.9)}
+.btn.alt{background:transparent;color:var(--p);border:2px solid var(--p);box-shadow:none}
+.chip{background:var(--card);color:var(--p);border:2px solid var(--p);border-radius:20px;padding:4px 16px;font-size:14px}
+.q{padding:14px 0;border-top:2px dashed var(--bd)}.q:first-of-type{border-top:0}.q.miss{background:rgba(224,49,49,.1);border-radius:14px;padding:14px 8px}
+.qt{font-weight:600}.qn{display:inline-block;min-width:30px;color:#fff;background:var(--p);border-radius:10px;text-align:center;font-size:13px;margin-inline-end:8px}
+.o{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:10px}.o input{position:absolute;opacity:0;width:0}
+.o label{display:flex;align-items:center;justify-content:center;text-align:center;font-size:12.5px;line-height:1.4;min-height:48px;padding:3px;border:2px solid var(--bd);border-radius:14px;cursor:pointer;background:var(--bg)}
+.o input:checked+label{background:var(--c);border-color:var(--c);color:#fff;font-weight:600;transform:scale(1.04)}
+.o input:focus-visible+label{outline:3px solid var(--p);outline-offset:2px}
+#bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:8px 0}
+.pgb{height:12px;background:var(--bd);border-radius:8px;overflow:hidden}.pgb i{display:block;height:100%;width:0;background:linear-gradient(90deg,#ff9f43,#ff5fa2,#6c4cf1);transition:width .25s}
+.nav{display:flex;gap:10px;justify-content:center;margin:18px 0}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:8px;border-bottom:1px solid var(--bd);text-align:start;vertical-align:middle}th{color:var(--mut);font-weight:600;background:var(--bg)}.sc{overflow-x:auto}
+.dot{display:inline-block;width:12px;height:12px;border-radius:50%;margin-inline-end:7px;vertical-align:-1px}
+.pill{display:inline-block;padding:1px 11px;border-radius:20px;color:#fff;font-size:12.5px;font-weight:600;white-space:nowrap}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px}.tile{border-radius:18px;padding:12px;color:#fff;text-align:center}.tile b{display:block;font-size:26px;line-height:1.3}.tile span{font-size:13px}
+.mb{position:relative;height:12px;background:var(--bd);border-radius:8px;margin:6px 0 10px}.mb i{position:absolute;top:0;bottom:0;inset-inline-start:0;border-radius:8px}.mb u{position:absolute;top:-4px;bottom:-4px;width:3px;background:var(--bad);border-radius:2px}
+.hide{display:none}.warn{background:rgba(240,140,0,.12);border:2px solid var(--warn);border-radius:16px;padding:10px 14px}
+details summary{cursor:pointer;font-weight:600;color:var(--p)}
+@media(max-width:600px){.g2,.gr{grid-template-columns:1fr}.g4{grid-template-columns:1fr 1fr}.o label{font-size:11.5px;min-height:44px}.hero h1{font-size:22px}}
+@media print{body{background:#fff;color:#000}#bar,.nav,.noprint{display:none!important}.card{break-inside:avoid;border-color:#999;box-shadow:none}}
+body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(circle at 8% 12%,rgba(255,95,162,.18) 0 40px,transparent 41px),radial-gradient(circle at 92% 22%,rgba(255,159,67,.2) 0 56px,transparent 57px),radial-gradient(circle at 15% 88%,rgba(18,184,134,.16) 0 64px,transparent 65px),radial-gradient(circle at 85% 78%,rgba(67,97,238,.16) 0 48px,transparent 49px)}
+.pg .qn{background:var(--p2,var(--p))}
+.dots{display:flex;gap:6px;justify-content:center;margin-top:6px}.dots b{width:22px;height:8px;border-radius:6px;transition:background .3s}
+.lg{display:flex;flex-wrap:wrap;gap:12px;font-size:12.5px;color:var(--mut);margin-top:6px;justify-content:center}.lg i{display:inline-block;width:12px;height:12px;border-radius:4px;margin-inline-end:5px;vertical-align:-1px}
+.o label{transition:transform .15s}.o label:hover{transform:translateY(-2px)}
+.card>h2:first-child{display:inline-block;background:linear-gradient(135deg,#6c4cf133,#ff5fa233);padding:2px 16px;border-radius:14px}
+@media (prefers-reduced-motion:reduce){.o label,.pgb i,.dots b{transition:none}}
+.by{margin-top:4px;font-size:13.5px;font-weight:600;opacity:.95}.credit{text-align:center;color:var(--mut);font-size:13px;margin:26px 0 10px}.credit::before{content:'';display:block;height:4px;width:90px;margin:0 auto 10px;border-radius:4px;background:linear-gradient(90deg,#ff9f43,#ff5fa2,#6c4cf1)}
+.toast{position:fixed;bottom:calc(16px + env(safe-area-inset-bottom,0px));left:16px;right:16px;margin:auto;max-width:420px;background:#241b4b;color:#fff;border-radius:16px;padding:10px 16px;text-align:center;z-index:30;box-shadow:0 10px 24px -10px rgba(0,0,0,.6);display:none}
+@media print{@page{size:A4;margin:12mm}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}body.pg #tdet,body.pp #tlist{display:none}.toast{display:none!important}}
+</style>
+</head>
+<body>
+<main>
+<div class="noprint" style="text-align:end"><button class="chip" id="tm">پنل پژوهشگر</button></div>
+<div id="stu">
+<div class="hero"><h1>آزمون SCL-90-R</h1><div class="by">طراح نرم‌افزار: دریا نجاتی راد</div><p>فهرست ۹۰ سؤالی علائم مرضی، با پنج گزینه از «هیچ» تا «خیلی زیاد»</p></div>
+<div id="bar" class="hide"><div class="pgb"><i id="pgi"></i></div><div class="mut" id="pgt"></div><div class="dots" id="dots"></div></div>
+<section class="card pg" id="s0">
+<h2>راهنما</h2>
+<p>در ادامه ۹۰ سؤال می‌بینید. هر سؤال را با دقت بخوانید و میزان آن را در <b>هفته گذشته تا امروز</b> مشخص کنید. لطفاً به همه سؤال‌ها پاسخ دهید. پاسخ درست یا غلط وجود ندارد و حدود ۱۵ دقیقه زمان می‌برد.</p>
+<h3>مشخصات</h3>
+<div class="g2">
+<div><label class="f" for="nm">نام و نام خانوادگی (یا کد)</label><input type="text" id="nm" autocomplete="off"></div>
+<div><label class="f" for="ag">سن</label><input type="number" id="ag" min="10" max="110" inputmode="numeric"></div>
+<div><label class="f" for="gn">جنسیت</label><select id="gn"><option value="">انتخاب کنید</option><option>زن</option><option>مرد</option><option>سایر</option></select></div>
+<div><label class="f" for="ed">تحصیلات</label><select id="ed"><option value="">انتخاب کنید</option><option>زیر دیپلم</option><option>دیپلم</option><option>کارشناسی</option><option>کارشناسی ارشد و بالاتر</option></select></div>
+<div><label class="f" for="ms">وضعیت تأهل</label><select id="ms"><option value="">انتخاب کنید</option><option>مجرد</option><option>متأهل</option><option>همسر فوت‌شده / جدا‌شده</option></select></div>
+<div><label class="f" for="jb">شغل</label><input type="text" id="jb" autocomplete="off"></div>
+</div>
+</section>
+<div id="pgs"></div>
+<div class="nav"><button class="btn alt hide" id="prev">بخش قبلی</button><button class="btn" id="next">شروع آزمون</button></div>
+<p id="err" class="mut" style="color:var(--bad);text-align:center"></p>
+<section class="card hide" id="done"></section>
+</div>
+
+<div id="tp" class="hide">
+<div class="hero"><h1>پنل پژوهشگر</h1><div class="by">طراح نرم‌افزار: دریا نجاتی راد</div><p>کدهای دریافتی را وارد کنید تا جدول‌ها و نمودارهای تحلیلی ساخته شود</p></div>
+<div class="card noprint"><h2>خط برش‌ها</h2>
+<div class="g4"><div><label class="f" for="cf">هر عامل</label><input type="number" id="cf" step="0.01" value="2.5"></div><div><label class="f" for="cg">GSI</label><input type="number" id="cg" step="0.01" value="0.7"></div><div><label class="f" for="cp">PST</label><input type="number" id="cp" step="0.01" value="0.7"></div><div><label class="f" for="cd">PSDI</label><input type="number" id="cd" step="0.01" value="0.7"></div></div>
+<p class="cap">PST تعداد سؤال‌های با پاسخ غیرصفر (بین ۰ تا ۹۰) است. با خط برش ۰٫۷ تقریباً هر فردی که حتی یک علامت گزارش کند بالاتر از خط برش قرار می‌گیرد. اگر استاد شما عدد دیگری گفته، اینجا تغییر دهید.</p></div>
+<div class="card noprint"><h2>کدهای دریافتی</h2><p class="mut">هر کد را در یک خط یا با فاصله بچسبانید.</p><textarea id="codes" rows="6" dir="ltr"></textarea><div style="margin-top:10px"><button class="btn" id="an">تحلیل کدها</button></div><p id="terr" class="mut"></p></div>
+<div id="tlist"></div><div id="tdet"></div>
+</div>
+<footer class="credit">طراح و سازنده نرم‌افزار: دریا نجاتی راد</footer>
+</main>
+<script>
+const $=id=>document.getElementById(id),fa=n=>Number(n).toLocaleString('fa-IR'),fx=(n,d=2)=>Number(n).toLocaleString('fa-IR',{minimumFractionDigits:d,maximumFractionDigits:d});
+const OPT=['هیچ','کمی','تا حدی','زیاد','خیلی زیاد'],OC=['#12a679','#5fa80a','#d98e00','#ee6a1a','#e03131'];
+const F=[
+{n:'شکایات جسمانی (خود بیمارانگاری)',s:'جسمانی',c:'#ff5d5d',it:[1,4,12,27,40,42,48,49,52,53,56,58]},
+{n:'وسواس و اجبار',s:'وسواس-اجبار',c:'#ff9f1c',it:[3,9,10,28,38,45,46,51,55,65]},
+{n:'حساسیت در روابط متقابل',s:'حساسیت بین‌فردی',c:'#f0b400',it:[6,21,34,36,37,41,61,69,73]},
+{n:'افسردگی',s:'افسردگی',c:'#4361ee',it:[5,14,15,20,22,26,29,30,31,32,54,71,79]},
+{n:'اضطراب',s:'اضطراب',c:'#00a8cc',it:[2,17,23,33,39,57,72,78,80,86]},
+{n:'خصومت (پرخاشگری)',s:'پرخاشگری',c:'#d6336c',it:[11,24,63,67,74,81]},
+{n:'فوبیا (ترس مرضی)',s:'فوبیا',c:'#12b886',it:[13,25,47,50,70,75,82]},
+{n:'افکار پارانوئیدی',s:'پارانوئید',c:'#7cb518',it:[8,18,43,68,76,83]},
+{n:'روان‌پریشی',s:'روان‌پریشی',c:'#9c36b5',it:[7,16,35,62,77,84,85,87,88,90]}];
+const ADD=[19,44,59,60,64,66,89],FM={};F.forEach(f=>f.it.forEach(i=>FM[i]=f));ADD.forEach(i=>FM[i]={s:'سؤال اضافی',c:'#868e96'});
+const Q=['آیا از هفته گذشته تا به امروز سردردهایی داشته‌اید؟','آیا بی‌جهت دلشوره دارید و توی دلتان می‌لرزد؟','آیا افکار مزاحمی که دوست ندارید مرتب وارد سر شما می‌شوند که ولتان نکنند؟ (منظور افکار مزاحم و تکراری)','آیا ضعف می‌کنید و سرتان گیج می‌رود؟','آیا علاقه خود را نسبت به فعالیت‌ها و لذت‌های جنسی از دست داده‌اید؟','آیا ایرادگیر هستید؟','آیا فکر می‌کنید که اختیار فکرهای شما به دست دیگران است، یعنی افکار شما را دیگران کنترل می‌کنند و یا با دستگاه‌هایی از راه دور مغز یا فکر شما را در اختیار خود دارند؟','آیا احساس می‌کنید بخاطر بیشتر گرفتاری‌های شما دیگران را باید سرزنش کرد؟','آیا فراموش‌کار شده‌اید؟','آیا از ریخت و پاشیدگی‌ها در اطراف و سرسری گرفتن‌های دیگران ناراحت می‌شوید؟',
+'آیا زود دلخور و عصبانی می‌شوید؟','در هفته گذشته تا امروز در ناحیه قلب یا سینه احساس دردهایی داشته‌اید؟','آیا از رفتن به جاهای وسیع و یا کوچه و بازار می‌ترسید؟','آیا در هفته گذشته تا امروز خودتان را کم‌قوه حس می‌کنید و یا کند شده‌اید؟','آیا فکر اینکه به زندگیتان خاتمه بدهید به سرتان آمده است؟','آیا صداهایی به گوش شما می‌رسد که دیگران آن‌ها را نمی‌شنوند؟','آیا لرزش دارید؟','آیا احساس می‌کنید که به بیشتر مردم نمی‌توان اعتماد کرد؟','آیا بی‌اشتها شده‌اید؟','آیا زود به گریه می‌افتید؟',
+'آیا در برابر جنس مخالف احساس ناراحتی می‌کنید و خجالت می‌کشید؟','آیا احساس می‌کنید طوری گیر افتاده‌اید که نه راه پس دارید و نه راه پیش؟','آیا ناگهان و بدون هیچ علتی می‌ترسید؟','آیا ناگهان آنچنان از کوره در می‌روید که نمی‌توانید جلوی خودتان را بگیرید؟','آیا می‌ترسید تنها از خانه بیرون بروید؟','آیا خود را برای هر چیزی سرزنش می‌کنید؟','آیا پشت درد دارید؟','آیا احساس می‌کنید که کارهایتان پیشرفت نمی‌کند، مثل اینکه گره در کارتان افتاده باشد؟','آیا احساس تنهایی می‌کنید؟','آیا احساس غمگینی می‌کنید؟',
+'آیا برای هر چیز کوچکی زیاد دل‌نگران می‌شوید؟','آیا نسبت به همه چیز بی‌علاقه شده‌اید؟','آیا همیشه احساس ترس می‌کنید؟','آیا زود می‌رنجید؟ آیا حساس و زودرنج شده‌اید؟','آیا دیگران از فکرهای شما بدون اینکه به آن‌ها بگویید با خبر می‌شوند؟','آیا فکر می‌کنید که دیگران حرف شما را نمی‌فهمند و یا درد شما را حس نمی‌کنند؟ (توضیح اینکه: با شما همدردی نمی‌کنند)','آیا فکر می‌کنید که رفتار مردم نسبت به شما غیردوستانه است؛ یا آنکه شما را دوست ندارند؟','آیا برای اینکه کارها را درست انجام بدهید مجبور هستید خیلی آهسته کار کنید؟','آیا قلبتان تند می‌زند؟ طپش دارد؟','آیا در هفته گذشته تا امروز حال تهوع یا دل‌آشوبی داشته‌اید؟',
+'در میان کسانی که مثل شما هستند احساس می‌کنید از آن‌ها کمتر هستید؟','آیا در عضلاتتان احساس کوفتگی می‌کنید؟','آیا احساس می‌کنید که دیگران شما را زیر نظر دارند و یا درباره شما با دیگران حرف می‌زنند؟','آیا دیر خوابتان می‌برد؟ خواب رفتن برایتان مشکل است؟','وقتی کاری را انجام می‌دهید آیا مجبور هستید آن را چند بار تکرار کنید تا مطمئن شوید آن را درست انجام داده‌اید؟ (مثلاً در را چند بار امتحان کنید تا مطمئن شوید که بسته است)','آیا تصمیم گرفتن برایتان مشکل است؟','آیا از مسافرت با اتوبوس یا قطار یا هر وسیله نقلیه عمومی دیگر می‌ترسید؟','آیا دچار تنگی نفس شده‌اید؟ (نمی‌توانید راحت نفس بکشید)','آیا ناگهان احساس می‌کنید که گر گرفته‌اید (داغ شده‌اید) و یا یخ می‌کنید؟','آیا مجبور هستید بعضی کارها را نکنید و یا بعضی جاها نروید یا دست به بعضی چیزها نزنید برای اینکه از آن‌ها بی‌دلیل می‌ترسید؟ (کارها یا جاهایی یا چیزهایی که دیگران از آن نمی‌ترسند)',
+'آیا اتفاق می‌افتد حس کنید که نمی‌توانید فکر بکنید، مثل اینکه سرتان از فکر خالی است؟','آیا قسمت‌هایی از بدنتان خواب می‌رود یا گزگز (سوزن‌سوزن) می‌شود؟','آیا گاهی احساس می‌کنید که چیزی راه گلویتان را گرفته است؟ (مثل اینکه بغض گلویتان را گرفته باشد)','آیا نسبت به آینده ناامید هستید؟','آیا وقتی کاری را انجام می‌دهید برایتان مشکل است که تمام حواستان را جمع آن بکنید؟','آیا در بعضی قسمت‌های بدنتان احساس ضعف می‌کنید؟','آیا عصبی (کم‌تحمل) هستید و زود از جا در می‌روید؟','آیا در دست‌ها و پاهایتان احساس سنگینی می‌کنید؟','آیا فکرهای زیادی درباره مرگ و مردن دارید؟','آیا پرخوری می‌کنید؟',
+'آیا وقتی توجه مردم به شما است یا درباره شما در حضور خودتان حرف می‌زنند ناراحت می‌شوید؟','آیا بعضی وقت‌ها حس می‌کنید فکرهایتان مال خودتان نیست یا آن‌ها را توی سرتان گذاشته‌اند؟','آیا حس می‌کنید که میل شدیدی به کتک زدن و آسیب رساندن به دیگران دارید؟','آیا صبح‌ها زودتر از آنچه که عادت داشته‌اید بیدار می‌شوید و دیگر خوابتان نمی‌برد؟','آیا خود را مجبور به تکرار بعضی کارها مانند شستن، شمردن یا دست زدن به چیزهایی می‌بینید؟','آیا بدخواب هستید؟ ناراحت می‌خوابید؟','آیا گاهی حس می‌کنید که دلتان می‌خواهد چیزی را پرت کنید، خرد کنید، بشکنید؟','آیا فکرها و عقیده‌های مخصوص به خودتان را دارید که هیچ‌کس دیگری آن‌ها را قبول ندارد؟','آیا وقتی با دیگران هستید زیاده از حد در فکر و رفتارتان مراقب هستید که مبادا کاری کنید که آبرویتان برود؟ (مبادا خطایی از شما سر بزند)','آیا وقتی در جمع مردم هستید احساس ناراحتی و غریبگی می‌کنید، مثل اینکه با آن‌ها فرق دارید یا اینکه از آن‌ها خجالت می‌کشید؟',
+'آیا انجام هر کاری به نظرتان مشکل و پرزحمت می‌آید؟','آیا ناگهان دچار هول شدید و وحشت‌زدگی می‌شوید؟','آیا در بین جمعیت از اینکه چیزی بخورید و یا بیاشامید ناراحت می‌شوید؟','آیا زیادی درگیر می‌شوید و جروبحث می‌کنید؟','آیا وقتی تنها می‌مانید مضطرب می‌شوید؟ می‌ترسید؟','آیا دیگران قدر و قیمت شما را نمی‌دانند؟','آیا در میان جمع هم خود را تنها حس می‌کنید؟','این روزها طوری بی‌قرار و ناآرام می‌شوید که نمی‌توانید یک‌جا بنشینید؟','آیا فکر می‌کنید که آدم به‌دردنخور و بی‌ارزشی شده‌اید؟','آیا احساس می‌کنید چیزهای آشنا (قیافه‌ها یا مناظر آشنا) به نظرتان ناآشنا است؟',
+'آیا زود داد و فریاد راه می‌اندازید و چیزها را پرت می‌کنید؟','آیا می‌ترسید که در انظار مردم غش کنید و بیفتید؟','آیا حس می‌کنید که اگر به دیگران زیاد رو بدهید از شما سوءاستفاده کنند؟','آیا افکاری در رابطه با مسائل جنسی دارید که بیش از اندازه شما را ناراحت می‌کند؟','آیا فکر می‌کنید که آن‌قدر گنهکارید که باید عذاب و عقوبت ببینید؟','آیا احساس می‌کنید که مجبور هستید کارهایی را انجام بدهید؟ (آیا فکرها و شکل‌های خیالی ترسناک به سراغ شما می‌آید)','آیا خیال می‌کنید عیب و نقص یا اختلال عمده‌ای در بدنتان پیدا شده است؟','آیا نزدیک و صمیمی شدن با افراد برایتان خیلی مشکل است؟','آیا بیشتر اوقات احساس تقصیر و گناه می‌کنید؟','احساس می‌کنید دارای یک‌نوع ناراحتی روانی هستید یا چیزی ذهن شما را آزار می‌دهد؟'];
+/* ---------- فرم آزمون ---------- */
+let step=0,D={},T=[];
+for(let p=0;p<9;p++){let h=`<section class='card pg hide' id='s${p+1}' style='border-top-color:${F[p].c};--p2:${F[p].c}'><h2>بخش ${fa(p+1)} از ${fa(9)}</h2><p class='mut'>به هر سؤال بر اساس وضعیت خودتان در هفته گذشته تا امروز پاسخ دهید.</p>`;
+for(let i=p*10;i<p*10+10;i++){h+=`<div class='q' id='q${i+1}'><div class='qt'><span class='qn'>${fa(i+1)}</span>${Q[i]}</div><div class='o'>`+OPT.map((t,j)=>`<span><input type='radio' name='r${i+1}' id='r${i+1}_${j}' value='${j}'><label for='r${i+1}_${j}' style='--c:${OC[j]}'>${t}</label></span>`).join('')+'</div></div>'}
+$('pgs').insertAdjacentHTML('beforeend',h+'</section>')}
+const answered=()=>document.querySelectorAll('#pgs input:checked').length;
+function prog(){const n=answered();$('dots').innerHTML=F.map((f,i)=>`<b style='background:${i+1<=step?f.c:'var(--bd)'}'></b>`).join('');$('pgi').style.width=n/90*100+'%';$('pgt').textContent=`${fa(n)} از ${fa(90)} سؤال پاسخ داده شد`}
+function go(n){step=n;for(let p=0;p<=9;p++)$('s'+p).classList.toggle('hide',p!==n);$('bar').classList.toggle('hide',n===0);$('prev').classList.toggle('hide',n===0);$('next').textContent=n===0?'شروع آزمون':n===9?'ثبت پاسخ‌ها':'بخش بعدی';prog();window.scrollTo({top:0,behavior:'smooth'})}
+document.addEventListener('change',e=>{if(e.target.name&&e.target.name[0]==='r'){prog();e.target.closest('.q').classList.remove('miss')}});
+$('prev').onclick=()=>go(step-1);
+$('next').onclick=()=>{$('err').textContent='';
+if(step===0){if(!$('nm').value.trim()){$('err').textContent='لطفاً نام یا کد را وارد کنید.';return}go(1);return}
+const miss=[];for(let i=(step-1)*10+1;i<=step*10;i++)if(!document.querySelector(`input[name=r${i}]:checked`))miss.push(i);
+document.querySelectorAll('#s'+step+' .q').forEach(q=>q.classList.toggle('miss',miss.includes(+q.id.slice(1))));
+if(miss.length){$('err').textContent=`${fa(miss.length)} سؤال بدون پاسخ مانده است.`;$('q'+miss[0]).scrollIntoView({behavior:'smooth',block:'center'});return}
+step<9?go(step+1):finish()};
+const gather=()=>({nm:$('nm').value.trim(),ag:$('ag').value,gn:$('gn').value,ed:$('ed').value,ms:$('ms').value,jb:$('jb').value,dt:new Date().toLocaleDateString('fa-IR')});
+function enc(d,a){return 'SCL1.'+btoa(unescape(encodeURIComponent(JSON.stringify([d.nm,d.ag,d.gn,d.ed,d.ms,d.jb,d.dt,a.join('')])))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'')}
+function dec(c){try{c=c.trim().replace(/^SCL1\./,'').replace(/-/g,'+').replace(/_/g,'/');while(c.length%4)c+='=';const x=JSON.parse(decodeURIComponent(escape(atob(c))));if(!/^[0-4]{90}$/.test(x[7]))return null;return{D:{nm:x[0],ag:x[1],gn:x[2],ed:x[3],ms:x[4],jb:x[5],dt:x[6]},r:calc(x[7].split('').map(Number))}}catch(e){return null}}
+function finish(){const a=[];for(let i=1;i<=90;i++)a.push(+document.querySelector(`input[name=r${i}]:checked`).value);const code=enc(gather(),a);
+for(let p=0;p<=9;p++)$('s'+p).classList.add('hide');$('bar').classList.add('hide');document.querySelector('.nav').classList.add('hide');
+$('done').classList.remove('hide');$('done').innerHTML=`<h2>پاسخ‌های شما ثبت شد. ممنون از همکاری‌تان</h2><p>لطفاً کد زیر را کپی کنید و برای پژوهشگر بفرستید. نتیجه را پژوهشگر بررسی می‌کند.</p><textarea id='cd' rows='4' readonly dir='ltr'>${code}</textarea><div style='display:flex;gap:10px;margin-top:10px;flex-wrap:wrap'><button class='btn' id='cc'>کپی کد</button><button class='btn alt' id='sh'>ارسال کد</button></div><p id='cm' class='mut'></p>`;
+$('cc').onclick=()=>{$('cd').select();if(navigator.clipboard)navigator.clipboard.writeText(code).catch(()=>document.execCommand('copy'));else document.execCommand('copy');$('cm').textContent='کد کپی شد.'};
+$('sh').onclick=()=>navigator.share?navigator.share({text:code}).catch(()=>{}):$('cc').click();window.scrollTo(0,0)}
+/* ---------- نمره‌گذاری ---------- */
+function calc(a){const fs=F.map(f=>{const sum=f.it.reduce((x,i)=>x+a[i-1],0);return{...f,sum,k:f.it.length,mean:sum/f.it.length}});
+const add=ADD.reduce((x,i)=>x+a[i-1],0),tot=fs.reduce((x,f)=>x+f.sum,0)+add,pst=a.filter(x=>x>0).length;return{a,fs,add,tot,gsi:tot/90,pst,psdi:pst?tot/pst:0}}
+const cv=id=>{const x=parseFloat($(id).value);return isNaN(x)?({cf:2.5,cg:.7,cp:.7,cd:.7})[id]:x};
+const col3=['var(--ok)','var(--warn)','var(--bad)'],STL=['در محدوده طبیعی','بالاتر از خط برش','مشکل جدی (۳ یا بیشتر)'];
+const pill=i=>`<span class='pill' style='background:${col3[i]}'>${STL[i]}</span>`,fst=m=>m>=3?2:m>=cv('cf')?1:0,ist=(v,id)=>v>=cv(id)?1:0;
+const dot=f=>`<i class='dot' style='background:${f.c}'></i>`;
+const mb=(v,max,cut)=>`<div class='mb'><i style='width:${Math.min(v,max)/max*100}%;background:${v>=cut?'var(--warn)':'var(--ok)'}'></i><u style='inset-inline-start:${Math.min(cut,max)/max*100}%'></u></div>`;
+/* ---------- نمودارها ---------- */
+function col(o){const v=o.v,n=v.length,x0=46,W=408,H=170,y0=20,st=W/n,bw=Math.min(38,st*.7),Y=a=>y0+H-Math.min(a,o.max)/o.max*H,tk=o.tk||[0,1,2,3,4];
+let s=`<svg viewBox='0 0 460 285' style='width:100%' role='img' aria-label='${o.t}'>`;
+tk.forEach(t=>s+=`<line x1='${x0}' x2='454' y1='${Y(t)}' y2='${Y(t)}' stroke='var(--bd)'/><text x='${x0-6}' y='${Y(t)+4}' font-size='10' text-anchor='end' fill='var(--mut)'>${fa(t)}</text>`);
+v.forEach((a,i)=>{const cx=x0+W-(i+.5)*st,y=Y(a);s+=`<rect x='${cx-bw/2}' y='${y}' width='${bw}' height='${Y(0)-y}' rx='6' fill='${o.c[i]}' ${o.hi&&o.hi[i]?`stroke='var(--tx)' stroke-width='2.5'`:''}/><text x='${cx}' y='${y-5}' font-size='10.5' font-weight='600' text-anchor='middle' fill='var(--tx)'>${o.f?o.f(a):fx(a)}</text><text x='${cx}' y='${Y(0)+14}' font-size='10.5' text-anchor='end' fill='var(--tx)' transform='rotate(-40 ${cx} ${Y(0)+14})'>${o.l[i]}</text>`});
+if(o.cut!=null)s+=`<line x1='${x0}' x2='454' y1='${Y(o.cut)}' y2='${Y(o.cut)}' stroke='#e03131' stroke-width='2' stroke-dasharray='6 4'/><text x='${x0+4}' y='${Y(o.cut)-5}' font-size='10.5' font-weight='600' fill='#e03131'>${o.cl}</text>`;
+return s+'</svg>'}
+function rad9(vals,cut){const cx=250,cy=170,R=105,A=k=>(90-k*40)*Math.PI/180,P=(q,k)=>[cx+q*Math.cos(A(k)),cy-q*Math.sin(A(k))],poly=f=>F.map((_,k)=>P(R*f(k),k).join(',')).join(' ');
+let s=`<svg viewBox='0 0 500 345' style='width:100%;max-width:520px' role='img' aria-label='نمودار راداری نه عامل'>`;
+[1,2,3,4].forEach(m=>s+=`<polygon points='${poly(()=>m/4)}' fill='none' stroke='var(--bd)'/>`);
+F.forEach((_,k)=>{const p=P(R,k);s+=`<line x1='${cx}' y1='${cy}' x2='${p[0]}' y2='${p[1]}' stroke='var(--bd)'/>`});
+s+=`<polygon points='${poly(()=>cut/4)}' fill='#e03131' fill-opacity='.06' stroke='#e03131' stroke-dasharray='5 4' stroke-width='1.6'/><polygon points='${poly(k=>Math.min(vals[k],4)/4)}' fill='var(--p)' fill-opacity='.28' stroke='var(--p)' stroke-width='2.5' stroke-linejoin='round'/>`;
+F.forEach((f,k)=>{const d=P(R*Math.min(vals[k],4)/4,k),l=P(R+14,k),cs=Math.cos(A(k)),an=cs>.3?'start':cs<-.3?'end':'middle',dy=k===0?-4:(k===4||k===5)?14:4;s+=`<circle cx='${d[0]}' cy='${d[1]}' r='5' fill='${f.c}' stroke='var(--card)' stroke-width='2'/><text x='${l[0]}' y='${l[1]+dy}' text-anchor='${an}' font-size='12' fill='var(--tx)'>${f.s} (${fx(vals[k])})</text>`});
+return s+'</svg>'}
+const fcol=(vals,t)=>col({v:vals,l:F.map(f=>f.s),c:F.map(f=>f.c),max:4,cut:cv('cf'),cl:`خط برش ${fx(cv('cf'),1)}`,hi:vals.map(x=>x>=cv('cf')),t});
+/* ---------- هنجارها ---------- */
+const NORM=[[.84,.75,.36,.42,.30,.31],[1.27,.91,.39,.25,.97,.50],[1.41,.89,.39,.29,.96,.53],[1.79,.94,.36,.44,.49,.38],[1.47,.88,.30,.37,.33,.38],[1.10,.93,.30,.40,.29,.35],[.74,.80,.13,.31,.25,.30],[1.16,.92,.34,.44,.76,.56],[.94,.70,.14,.25,.38,.69]],
+NI={gsi:[1.26,.68,.31,.21,.46,.35],psdi:[2.14,.58,.31,.32,.42,.42],pst:[50.17,18.98,19.29,15.38,28.72,18.53]},SC=['#ff5d5d','#12b886','#00a8cc'];
+function gcol(pv,who){const ser=[pv,NORM.map(r=>r[0]),NORM.map(r=>r[2]),NORM.map(r=>r[4])],cl=['var(--p)',...SC],mx=Math.max(1,Math.ceil(Math.max(...ser.flat())*2)/2),x0=40,W=436,H=170,y0=18,gw=W/9,bw=10,Y=a=>y0+H-a/mx*H;
+let s=`<svg viewBox='0 0 480 290' style='width:100%' role='img' aria-label='مقایسه با گروه‌های مرجع'>`;
+for(let t=0;t<=mx+.01;t+=.5)s+=`<line x1='${x0}' x2='476' y1='${Y(t)}' y2='${Y(t)}' stroke='var(--bd)'/><text x='${x0-6}' y='${Y(t)+4}' font-size='10' text-anchor='end' fill='var(--mut)'>${fx(t,1)}</text>`;
+F.forEach((f,i)=>{const cx=x0+W-(i+.5)*gw;ser.forEach((a,j)=>{const x=cx+(1.5-j)*(bw+2)-bw/2,y=Y(a[i]);s+=`<rect x='${x}' y='${y}' width='${bw}' height='${Y(0)-y}' rx='3' fill='${cl[j]}'/>`});s+=`<text x='${cx}' y='${Y(0)+14}' font-size='10.5' text-anchor='end' fill='var(--tx)' transform='rotate(-40 ${cx} ${Y(0)+14})'>${f.s}</text>`});
+return s+`</svg><div class='lg'>`+[who,'بیماران سرپایی','افراد عادی (۱)','افراد عادی (۲)'].map((t,j)=>`<span><i style='background:${cl[j]}'></i>${t}</span>`).join('')+'</div>'}
+function normCard(mv,ix,who){let h=`<div class='card'><h2>مقایسه با هنجارهای منبع</h2><p class='cap'>میانگین (انحراف معیار) هر گروه مرجع. ستون z نشان می‌دهد ${who} چند انحراف معیار بالاتر یا پایین‌تر از افراد عادی (۱) است. z برابر ۲ یا بیشتر پررنگ می‌شود.</p><div class='sc'><table><tr><th>عامل</th><th>${who}</th><th>بیماران سرپایی</th><th>افراد عادی (۱)</th><th>افراد عادی (۲)</th><th>z از عادی (۱)</th></tr>`;
+const row=(nm,c,v,n,d,z)=>`<tr${z===undefined?'':''} style='${c?'':'background:var(--bg)'}'><td>${c?dot({c}):''}${nm}</td><td><b>${fx(v,d)}</b></td><td>${fx(n[0],d)} (${fx(n[1],d)})</td><td>${fx(n[2],d)} (${fx(n[3],d)})</td><td>${fx(n[4],d)} (${fx(n[5],d)})</td><td style='${z>=2?'color:var(--bad);font-weight:800':''}'>${z===null?'—':fx(z,1)}</td></tr>`;
+F.forEach((f,k)=>{const n=NORM[k];h+=row(f.s,f.c,mv[k],n,2,(mv[k]-n[2])/n[3])});
+h+=row('GSI','',ix.gsi,NI.gsi,2,(ix.gsi-NI.gsi[2])/NI.gsi[3])+row('PSDI','',ix.psdi,NI.psdi,2,null)+row('PST','',ix.pst,NI.pst,1,(ix.pst-NI.pst[2])/NI.pst[3]);
+return h+`</table></div><p class='cap'>اعداد جدول هنجار از منبع شما نقل شده است. در ردیف PSDI میانگین گروه‌های عادی کمتر از ۱ آمده که از نظر محاسبه ممکن نیست (PSDI معمولاً ۱ یا بیشتر است)، پس برایش z نگذاشته‌ام. این عدد را با کتاب خود تطبیق دهید.</p><h3>مقایسه نمودار با گروه‌های مرجع</h3>${gcol(mv,who)}</div>`}
+/* ---------- گزارش فردی ---------- */
+function rep(t){const r=t.r,d=t.D,hi=r.fs.filter(f=>f.mean>=cv('cf')),g=x=>x||'—';
+let h=`<div class='card'><h2>گزارش فردی: ${g(d.nm)}</h2><div class='sc'><table><tr><th>سن</th><td>${d.ag?fa(d.ag):'—'}</td><th>جنسیت</th><td>${g(d.gn)}</td><th>تحصیلات</th><td>${g(d.ed)}</td></tr><tr><th>تأهل</th><td>${g(d.ms)}</td><th>شغل</th><td>${g(d.jb)}</td><th>تاریخ اجرا</th><td>${g(d.dt)}</td></tr></table></div></div>`;
+h+=`<div class='card'><h2>شاخص‌های کلی</h2><div class='sc'><table><tr><th>شاخص</th><th>نمره</th><th>خط برش</th><th>وضعیت</th><th>معنا</th></tr>`+
+[['GSI (شاخص علائم کلی)',r.gsi,'cg',4,'مجموع نمره همه ۹۰ سؤال ÷ ۹۰'],['PST (جمع علائم مثبت)',r.pst,'cp',90,'تعداد سؤال‌هایی که پاسخشان صفر نبوده'],['PSDI (ضریب ناراحتی علائم مثبت)',r.psdi,'cd',4,'مجموع نمره‌ها ÷ PST']].map(x=>`<tr><td>${x[0]}</td><td><b>${x[0][0]==='P'&&x[0][1]==='S'&&x[0][2]==='T'?fa(x[1]):fx(x[1])}</b></td><td>${fx(cv(x[2]))}</td><td>${pill(ist(x[1],x[2]))}</td><td class='cap'>${x[4]}</td></tr><tr><td colspan='5' style='padding:0 8px;border:0'>${mb(x[1],x[3],cv(x[2]))}</td></tr>`).join('')+`</table></div><p class='cap'>مجموع کل نمرات: ${fa(r.tot)}. مجموع هفت سؤال اضافی: ${fa(r.add)}.</p></div>`;
+h+=`<div class='card'><h2>نه عامل آزمون</h2><div class='sc'><table><tr><th>عامل</th><th>تعداد سؤال</th><th>مجموع نمره</th><th>میانگین</th><th>خط برش</th><th>وضعیت</th></tr>`+r.fs.map(f=>`<tr><td>${dot(f)}${f.n}</td><td>${fa(f.k)}</td><td>${fa(f.sum)}</td><td><b>${fx(f.mean)}</b></td><td>${fx(cv('cf'),1)}</td><td>${pill(fst(f.mean))}</td></tr>`).join('')+`<tr><td>${dot({c:'#868e96'})}سؤال‌های اضافی (در GSI لحاظ می‌شوند)</td><td>${fa(7)}</td><td>${fa(r.add)}</td><td>${fx(r.add/7)}</td><td>—</td><td>—</td></tr></table></div></div>`;
+h+=`<div class='card'><h2>نمودارها</h2><div class='gr'><div><h3>میانگین هر عامل</h3>${fcol(r.fs.map(f=>f.mean),'میانگین نه عامل')}<p class='cap'>خط‌چین قرمز خط برش است و ستون‌های دارای کادر از آن بالاترند.</p></div><div><h3>پروفایل راداری</h3>${rad9(r.fs.map(f=>f.mean),cv('cf'))}<p class='cap'>حلقه قرمز خط‌چین، خط برش عامل‌هاست.</p></div></div></div>`;
+h+=normCard(r.fs.map(f=>f.mean),r,'فرد')+`<div class='card'><h2>تفسیر</h2><p>${hi.length?`میانگین فرد در ${fa(hi.length)} عامل از ۹ عامل برابر یا بالاتر از ${fx(cv('cf'),1)} است: ${hi.map(f=>f.n+' ('+fx(f.mean)+')').join('، ')}. ${r.fs.some(f=>f.mean>=3)?'در عامل‌هایی با میانگین ۳ یا بیشتر، مشکل فرد در ارتباط با آن اختلال جدی تلقی می‌شود.':''}`:`میانگین فرد در هیچ‌یک از نه عامل به خط برش ${fx(cv('cf'),1)} نرسیده است.`} شاخص GSI برابر ${fx(r.gsi)} است و ${r.gsi>=cv('cg')?'بالاتر از':'پایین‌تر از'} خط برش ${fx(cv('cg'))} قرار دارد.</p>
+<p class='cap'>نکات منبع: میانگین ۲٫۵ و بالاتر در هر عامل نشانه اختلال قابل توجه و ۳ یا بیشتر نشانه مشکل جدی است. برای GSI در مطالعات مختلف خط برش‌های ۰٫۷، ۱ و ۱٫۳ گزارش شده است. در منبع دیگر، میانگین ۱ یا بالاتر نشانه حالات مرضی و بالاتر از ۳ نشانه حالات روان‌گسستگی آمده است. این آزمون غربالگری است و تشخیص نیست.</p></div>`;
+h+=`<div class='card'><details><summary>پاسخ تک‌تک سؤال‌ها</summary><div class='sc'><table><tr><th>#</th><th>سؤال</th><th>پاسخ</th><th>نمره</th><th>عامل</th></tr>`+r.a.map((v,i)=>`<tr><td>${fa(i+1)}</td><td>${Q[i]}</td><td>${OPT[v]}</td><td>${fa(v)}</td><td>${dot(FM[i+1])}${FM[i+1].s}</td></tr>`).join('')+`</table></div></details></div>`;
+return h}
+/* ---------- گزارش گروهی ---------- */
+const mean=a=>a.reduce((x,y)=>x+y,0)/a.length,sd=a=>{if(a.length<2)return 0;const m=mean(a);return Math.sqrt(a.reduce((x,y)=>x+(y-m)**2,0)/(a.length-1))};
+function grp(){const n=T.length,cf=cv('cf');
+const fv=F.map((_,k)=>T.map(t=>t.r.fs[k].mean)),iv=[['GSI','gsi','cg',x=>t=>t.r.gsi,4],['PST','pst','cp',null,90],['PSDI','psdi','cd',null,4]];
+const cnt=fv.map(a=>a.filter(x=>x>=cf).length),nh=T.filter(t=>t.r.gsi>=cv('cg')).length;
+let h=`<div class='card'><h2>نمای کلی گروه</h2><div class='tiles'><div class='tile' style='background:#6c4cf1'><b>${fa(n)}</b><span>تعداد آزمودنی</span></div><div class='tile' style='background:#ff5fa2'><b>${fx(mean(T.map(t=>t.r.gsi)))}</b><span>میانگین GSI</span></div><div class='tile' style='background:#ff9f43'><b>${fx(mean(T.map(t=>t.r.pst)),1)}</b><span>میانگین PST</span></div><div class='tile' style='background:#12a679'><b>${fx(mean(T.map(t=>t.r.psdi)))}</b><span>میانگین PSDI</span></div><div class='tile' style='background:#4361ee'><b>${fa(nh)}</b><span>بالاتر از خط برش GSI</span></div></div></div>`;
+h+=`<div class='card'><h2>جدول میانگین نه عامل در گروه</h2><div class='sc'><table><tr><th>عامل</th><th>میانگین گروه</th><th>انحراف معیار</th><th>کمترین</th><th>بیشترین</th><th>خط برش</th><th>تعداد بالاتر از خط برش</th><th>درصد</th></tr>`+
+F.map((f,k)=>`<tr><td>${dot(f)}${f.n}</td><td><b>${fx(mean(fv[k]))}</b></td><td>${fx(sd(fv[k]))}</td><td>${fx(Math.min(...fv[k]))}</td><td>${fx(Math.max(...fv[k]))}</td><td>${fx(cf,1)}</td><td>${fa(cnt[k])}</td><td>${fa(Math.round(cnt[k]/n*100))}٪</td></tr>`).join('')+
+[['GSI','gsi','cg'],['PST','pst','cp'],['PSDI','psdi','cd']].map(x=>{const a=T.map(t=>t.r[x[1]]),c=a.filter(v=>v>=cv(x[2])).length,d=x[1]==='pst'?1:2;return `<tr style='background:var(--bg)'><td><b>${x[0]}</b></td><td><b>${fx(mean(a),d)}</b></td><td>${fx(sd(a),d)}</td><td>${fx(Math.min(...a),d)}</td><td>${fx(Math.max(...a),d)}</td><td>${fx(cv(x[2]))}</td><td>${fa(c)}</td><td>${fa(Math.round(c/n*100))}٪</td></tr>`}).join('')+`</table></div></div>`;
+const gs=T.map(t=>t.r.gsi),gm=Math.max(1,Math.ceil(Math.max(...gs)*2)/2),tk=[];for(let x=0;x<=gm+.01;x+=.5)tk.push(x);
+h+=`<div class='card'><h2>نمودارهای گروه</h2><div class='gr'><div><h3>میانگین گروه در هر عامل</h3>${fcol(fv.map(mean),'میانگین گروه')}</div><div><h3>پروفایل راداری گروه</h3>${rad9(fv.map(mean),cf)}</div></div>
+<h3>تعداد افراد بالاتر از خط برش در هر عامل</h3>${col({v:cnt,l:F.map(f=>f.s),c:F.map(f=>f.c),max:Math.max(1,n),tk:[...Array(Math.min(n,6)+1).keys()].map(i=>Math.round(i*n/Math.min(n,6))),f:fa,t:'تعداد افراد بالاتر از خط برش'})}
+<h3>GSI هر آزمودنی</h3>${col({v:gs,l:T.map(t=>(t.D.nm||'—').slice(0,10)),c:gs.map(v=>v>=cv('cg')?'#ff5fa2':'#12a679'),max:gm,tk,cut:cv('cg'),cl:`خط برش ${fx(cv('cg'))}`,t:'GSI هر آزمودنی'})}</div>`;
+h+=normCard(fv.map(mean),{gsi:mean(T.map(t=>t.r.gsi)),psdi:mean(T.map(t=>t.r.psdi)),pst:mean(T.map(t=>t.r.pst))},'گروه')+`<div class='card'><h2>جدول آزمودنی‌ها</h2><div class='sc'><table><tr><th>نام</th><th>سن</th><th>جنسیت</th><th>GSI</th><th>PST</th><th>PSDI</th><th>عامل‌های بالاتر از برش</th><th></th></tr>`+T.map((t,i)=>`<tr><td>${t.D.nm||'—'}</td><td>${t.D.ag?fa(t.D.ag):'—'}</td><td>${t.D.gn||'—'}</td><td>${fx(t.r.gsi)}</td><td>${fa(t.r.pst)}</td><td>${fx(t.r.psdi)}</td><td>${fa(t.r.fs.filter(f=>f.mean>=cf).length)}</td><td class='noprint'><button class='btn alt' style='padding:2px 12px' data-i='${i}'>گزارش</button></td></tr>`).join('')+`</table></div><div class='noprint' style='display:flex;gap:10px;flex-wrap:wrap;margin-top:12px'><button class='btn alt' id='tsv'>کپی داده‌ها برای Excel</button><button class='btn' id='bx'>دانلود Excel</button><button class='btn' id='bw'>دانلود Word</button><button class='btn' id='bp'>ذخیره PDF</button></div><p id='tm2' class='cap'></p></div>`;
+return h}
+function tsv(){const r=[['نام','سن','جنسیت',...F.map(f=>f.s),'GSI','PST','PSDI']];T.forEach(t=>r.push([t.D.nm,t.D.ag,t.D.gn,...t.r.fs.map(f=>f.mean.toFixed(2)),t.r.gsi.toFixed(2),t.r.pst,t.r.psdi.toFixed(2)]));return r.map(x=>x.join('\t')).join('\n')}
+function an(){T=$('codes').value.split(/\s+/).filter(Boolean).map(dec);const bad=T.filter(x=>!x).length;T=T.filter(Boolean).sort((a,b)=>b.r.gsi-a.r.gsi);
+try{localStorage.setItem('sclCodes',$('codes').value)}catch(e){}
+$('terr').textContent=bad?`${fa(bad)} کد نامعتبر نادیده گرفته شد.`:'';$('tdet').innerHTML='';
+if(!T.length){$('tlist').innerHTML='';return}
+$('tlist').innerHTML=grp();$('bx').onclick=exportXlsx;$('bw').onclick=()=>exportWord(-1);$('bp').onclick=()=>pdf(-1);
+$('tsv').onclick=()=>{const v=tsv();if(navigator.clipboard)navigator.clipboard.writeText(v).catch(()=>{});$('tm2').textContent='کپی شد. در Excel چسبانده شود (Paste).'};
+$('tlist').querySelectorAll('button[data-i]').forEach(b=>b.onclick=()=>{$('tdet').innerHTML=`<div class='noprint'><button class='btn' onclick='exportWord(${+b.dataset.i})'>دانلود Word این فرد</button> <button class='btn' onclick='pdf(${+b.dataset.i})'>ذخیره PDF این فرد</button></div>`+rep(T[+b.dataset.i]);$('tdet').scrollIntoView({behavior:'smooth'})})}
+/* ---------- خروجی Excel / Word / PDF ---------- */
+const LIGHT={tx:'#241b4b',mut:'#6b6591',bd:'#e0dcf7',card:'#ffffff',bg:'#f1f0ff',p:'#6c4cf1',ok:'#12a679',warn:'#f08c00',bad:'#e03131'};
+const X=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+function msg(t,ms){let e=$('toast');if(!e){e=document.createElement('div');e.id='toast';e.className='toast noprint';document.body.appendChild(e)}e.textContent=t;e.style.display=t?'block':'none';if(ms)setTimeout(()=>{e.style.display='none'},ms)}
+function crc32(u){const t=crc32.t||(crc32.t=Array.from({length:256},(_,n)=>{let c=n;for(let k=0;k<8;k++)c=c&1?0xEDB88320^(c>>>1):c>>>1;return c>>>0}));let r=-1;for(let i=0;i<u.length;i++)r=t[(r^u[i])&255]^(r>>>8);return(r^-1)>>>0}
+function zip(files){const en=new TextEncoder(),parts=[],cd=[],u16=n=>[n&255,(n>>>8)&255],u32=n=>[n&255,(n>>>8)&255,(n>>>16)&255,(n>>>24)&255];let off=0;
+files.forEach(f=>{const nm=en.encode(f.name),d=typeof f.data==='string'?en.encode(f.data):f.data,crc=crc32(d);
+const h=new Uint8Array([0x50,0x4b,3,4,...u16(20),...u16(0x0800),...u16(0),...u16(0),...u16(0x21),...u32(crc),...u32(d.length),...u32(d.length),...u16(nm.length),...u16(0)]);
+parts.push(h,nm,d);cd.push(new Uint8Array([0x50,0x4b,1,2,...u16(20),...u16(20),...u16(0x0800),...u16(0),...u16(0),...u16(0x21),...u32(crc),...u32(d.length),...u32(d.length),...u16(nm.length),...u16(0),...u16(0),...u16(0),...u16(0),...u32(0),...u32(off)]),nm);off+=h.length+nm.length+d.length});
+const cs=cd.reduce((s,x)=>s+x.length,0),n=files.length,end=new Uint8Array([0x50,0x4b,5,6,0,0,0,0,...u16(n),...u16(n),...u32(cs),...u32(off),0,0]),all=[...parts,...cd,end],out=new Uint8Array(all.reduce((s,x)=>s+x.length,0));let p=0;all.forEach(x=>{out.set(x,p);p+=x.length});return out}
+function dl(bytes,name,type){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([bytes],{type}));a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},4000)}
+function fixSvg(s,sc){s=s.slice(s.indexOf('<svg'),s.indexOf('</svg>')+6);const e=s.indexOf('>');let h=s.slice(0,e);const k=h.indexOf(' style=');if(k>-1){const q=h.indexOf("'",k+8);h=h.slice(0,k)+h.slice(q+1)}
+const vb=h.split("viewBox='")[1].split("'")[0].split(' ').map(Number);s=`<svg xmlns='http://www.w3.org/2000/svg' width='${vb[2]*sc}' height='${vb[3]*sc}' font-family='Tahoma,Arial,sans-serif'`+h.slice(4)+s.slice(e);
+Object.keys(LIGHT).forEach(k=>s=s.split(`var(--${k})`).join(LIGHT[k]));return{s,w:vb[2],h:vb[3]}}
+function svgPng(svg){const q=fixSvg(svg,2);return new Promise((res,rej)=>{const im=new Image();im.onload=()=>{const c=document.createElement('canvas');c.width=q.w*2;c.height=q.h*2;const x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,c.width,c.height);x.drawImage(im,0,0);c.toBlob(bl=>bl.arrayBuffer().then(ab=>res({b:new Uint8Array(ab),w:q.w,h:q.h})),'image/png')};im.onerror=()=>rej(new Error('تبدیل نمودار ناموفق بود'));im.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(q.s)})}
+/* --- Excel --- */
+const colL=i=>{let s='';for(i++;i>0;i=Math.floor((i-1)/26))s=String.fromCharCode(65+(i-1)%26)+s;return s};
+function xlsx(sheets){const H="<?xml version='1.0' encoding='UTF-8' standalone='yes'?>",M="xmlns='http://schemas.openxmlformats.org/spreadsheetml/2006/main'",RT='http://schemas.openxmlformats.org/officeDocument/2006/relationships',n=sheets.length;
+const files=[{name:'[Content_Types].xml',data:H+`<Types xmlns='http://schemas.openxmlformats.org/package/2006/content-types'><Default Extension='rels' ContentType='application/vnd.openxmlformats-package.relationships+xml'/><Default Extension='xml' ContentType='application/xml'/><Override PartName='/xl/workbook.xml' ContentType='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml'/><Override PartName='/xl/styles.xml' ContentType='application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml'/>`+sheets.map((_,i)=>`<Override PartName='/xl/worksheets/sheet${i+1}.xml' ContentType='application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml'/>`).join('')+'</Types>'},
+{name:'_rels/.rels',data:H+`<Relationships xmlns='http://schemas.openxmlformats.org/package/2006/relationships'><Relationship Id='rId1' Type='${RT}/officeDocument' Target='xl/workbook.xml'/></Relationships>`},
+{name:'xl/workbook.xml',data:H+`<workbook ${M} xmlns:r='${RT}'><sheets>`+sheets.map((s,i)=>`<sheet name='${X(s.n)}' sheetId='${i+1}' r:id='rId${i+1}'/>`).join('')+'</sheets></workbook>'},
+{name:'xl/_rels/workbook.xml.rels',data:H+`<Relationships xmlns='http://schemas.openxmlformats.org/package/2006/relationships'>`+sheets.map((_,i)=>`<Relationship Id='rId${i+1}' Type='${RT}/worksheet' Target='worksheets/sheet${i+1}.xml'/>`).join('')+`<Relationship Id='rId${n+1}' Type='${RT}/styles' Target='styles.xml'/></Relationships>`},
+{name:'xl/styles.xml',data:H+`<styleSheet ${M}><fonts count='2'><font><sz val='11'/><name val='Tahoma'/></font><font><b/><sz val='11'/><color rgb='FFFFFFFF'/><name val='Tahoma'/></font></fonts><fills count='3'><fill><patternFill patternType='none'/></fill><fill><patternFill patternType='gray125'/></fill><fill><patternFill patternType='solid'><fgColor rgb='FF6C4CF1'/><bgColor indexed='64'/></patternFill></fill></fills><borders count='1'><border><left/><right/><top/><bottom/><diagonal/></border></borders><cellStyleXfs count='1'><xf numFmtId='0' fontId='0' fillId='0' borderId='0'/></cellStyleXfs><cellXfs count='3'><xf numFmtId='0' fontId='0' fillId='0' borderId='0' xfId='0'/><xf numFmtId='0' fontId='1' fillId='2' borderId='0' xfId='0' applyFont='1' applyFill='1' applyAlignment='1'><alignment horizontal='center' vertical='center' wrapText='1'/></xf><xf numFmtId='2' fontId='0' fillId='0' borderId='0' xfId='0' applyNumberFormat='1'/></cellXfs><cellStyles count='1'><cellStyle name='Normal' xfId='0' builtinId='0'/></cellStyles></styleSheet>`}];
+sheets.forEach((s,i)=>{let h=H+`<worksheet ${M}><sheetViews><sheetView rightToLeft='1' workbookViewId='0'><pane ySplit='1' topLeftCell='A2' activePane='bottomLeft' state='frozen'/></sheetView></sheetViews><sheetFormatPr defaultRowHeight='15'/><cols>`+s.w.map((w,j)=>`<col min='${j+1}' max='${j+1}' width='${w}' customWidth='1'/>`).join('')+'</cols><sheetData>';
+s.rows.forEach((r,ri)=>{h+=`<row r='${ri+1}'>`+r.map((v,ci)=>{const ref=colL(ci)+(ri+1);if(typeof v==='number'&&isFinite(v))return `<c r='${ref}' s='${Number.isInteger(v)?0:2}'><v>${v}</v></c>`;if(v===''||v==null)return '';return `<c r='${ref}' t='inlineStr' s='${ri?0:1}'><is><t xml:space='preserve'>${X(v)}</t></is></c>`}).join('')+'</row>'});
+files.push({name:`xl/worksheets/sheet${i+1}.xml`,data:h+'</sheetData></worksheet>'})});return zip(files)}
+function GS(){const n=T.length,cf=cv('cf'),fv=F.map((_,k)=>T.map(t=>t.r.fs[k].mean));
+const fr=F.map((f,k)=>({f,m:mean(fv[k]),sd:sd(fv[k]),mn:Math.min(...fv[k]),mx:Math.max(...fv[k]),c:fv[k].filter(x=>x>=cf).length}));
+const ir=[['GSI','gsi','cg'],['PSDI','psdi','cd'],['PST','pst','cp']].map(([nm,k,id])=>{const a=T.map(t=>t.r[k]);return{nm,m:mean(a),sd:sd(a),mn:Math.min(...a),mx:Math.max(...a),c:a.filter(x=>x>=cv(id)).length,cut:cv(id),d:k==='pst'?1:2}});return{n,cf,fv,fr,ir}}
+function buildXlsx(){const g=GS(),cf=g.cf,r3=x=>+x.toFixed(3),W=(n,f)=>[f||22,...Array(n-1).fill(14)];
+const s1=[['نام','سن','جنسیت','تحصیلات','تأهل','پایه/کلاس','تاریخ',...F.map(f=>f.s+' (میانگین)'),'GSI','PST','PSDI','تعداد عامل بالاتر از خط برش','وضعیت GSI']];
+T.forEach(t=>s1.push([t.D.nm||'',t.D.ag===''||isNaN(+t.D.ag)?t.D.ag:+t.D.ag,t.D.gn,t.D.ed,t.D.ms,t.D.jb,t.D.dt,...t.r.fs.map(f=>r3(f.mean)),r3(t.r.gsi),t.r.pst,r3(t.r.psdi),t.r.fs.filter(f=>f.mean>=cf).length,t.r.gsi>=cv('cg')?'بالاتر از خط برش':'پایین‌تر از خط برش']));
+const s2=[['شاخص','میانگین گروه','انحراف معیار','کمترین','بیشترین','خط برش','تعداد بالاتر از خط برش','درصد','بیماران: میانگین','بیماران: انحراف معیار','عادی ۱: میانگین','عادی ۱: انحراف معیار','عادی ۲: میانگین','عادی ۲: انحراف معیار','z از عادی ۱']];
+g.fr.forEach((r,k)=>{const n=NORM[k];s2.push([F[k].n,r3(r.m),r3(r.sd),r3(r.mn),r3(r.mx),cf,r.c,Math.round(r.c/g.n*100),...n,r3((r.m-n[2])/n[3])])});
+g.ir.forEach(r=>{const n=NI[r.nm.toLowerCase()];s2.push([r.nm,r3(r.m),r3(r.sd),r3(r.mn),r3(r.mx),r.cut,r.c,Math.round(r.c/g.n*100),...n,r.nm==='PSDI'?'':r3((r.m-n[2])/n[3])])});
+const s3=[['نام','عامل','تعداد سؤال','مجموع نمره','میانگین','خط برش','وضعیت']];T.forEach(t=>t.r.fs.forEach(f=>s3.push([t.D.nm||'',f.n,f.k,f.sum,r3(f.mean),cf,STL[fst(f.mean)]])));
+const s4=[['نام',...Q.map((_,i)=>'Q'+(i+1))]];T.forEach(t=>s4.push([t.D.nm||'',...t.r.a]));
+return xlsx([{n:'نمرات آزمودنی‌ها',w:W(s1[0].length),rows:s1},{n:'میانگین گروه و هنجار',w:W(15,30),rows:s2},{n:'جزئیات عامل‌ها',w:[22,30,10,10,10,10,22],rows:s3},{n:'پاسخ‌های خام',w:W(91,18),rows:s4}])}
+function exportXlsx(){if(!T.length)return;try{dl(buildXlsx(),'SCL90_results.xlsx','application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');msg('فایل Excel ساخته شد.',2500)}catch(e){msg('ساخت Excel ناموفق بود: '+e.message,5000)}}
+/* --- Word --- */
+const run=(t,o={})=>`<w:r><w:rPr><w:rFonts w:ascii='Tahoma' w:hAnsi='Tahoma' w:cs='Tahoma'/>${o.b?'<w:b/><w:bCs/>':''}${o.c?`<w:color w:val='${o.c}'/>`:''}<w:sz w:val='${o.s||22}'/><w:szCs w:val='${o.s||22}'/><w:rtl/></w:rPr><w:t xml:space='preserve'>${X(t)}</w:t></w:r>`;
+const P=(t,o={})=>`<w:p><w:pPr>${o.keep?'<w:keepNext/>':''}<w:bidi/><w:spacing w:before='${o.sb??60}' w:after='${o.sa??60}'/>${o.j?`<w:jc w:val='${o.j}'/>`:''}</w:pPr>${t===''?'':run(t,o)}</w:p>`;
+const HD=t=>P(t,{b:1,s:28,c:'6C4CF1',sb:240,sa:80,keep:1}),PB="<w:p><w:r><w:br w:type='page'/></w:r></w:p>";
+const TC=(c,w,hd)=>{const o=typeof c==='object'?c:{t:c};return `<w:tc><w:tcPr><w:tcW w:w='${w}' w:type='dxa'/>${hd?`<w:shd w:val='clear' w:color='auto' w:fill='6C4CF1'/>`:o.f?`<w:shd w:val='clear' w:color='auto' w:fill='${o.f}'/>`:''}<w:vAlign w:val='center'/></w:tcPr>${P(String(o.t),{b:hd||o.b,c:hd?'FFFFFF':o.c,s:o.s||18,sb:30,sa:30})}</w:tc>`};
+const TB=(rows,ws)=>`<w:tbl><w:tblPr><w:bidiVisual/><w:tblW w:w='${ws.reduce((a,b)=>a+b,0)}' w:type='dxa'/><w:tblBorders>`+['top','left','bottom','right','insideH','insideV'].map(s=>`<w:${s} w:val='single' w:sz='4' w:space='0' w:color='C9C3E8'/>`).join('')+`</w:tblBorders><w:tblLayout w:type='fixed'/></w:tblPr><w:tblGrid>${ws.map(w=>`<w:gridCol w:w='${w}'/>`).join('')}</w:tblGrid>`+rows.map((r,i)=>`<w:tr>${i?'':'<w:trPr><w:cantSplit/><w:tblHeader/></w:trPr>'}${r.map((c,j)=>TC(c,ws[j],i===0)).join('')}</w:tr>`).join('')+'</w:tbl>'+P('',{sa:0,sb:0});
+const IMG=(k,p,wcm)=>{const cx=Math.round(wcm*360000),cy=Math.round(cx*p.h/p.w);return `<w:p><w:pPr><w:bidi/><w:jc w:val='center'/></w:pPr><w:r><w:drawing><wp:inline distT='0' distB='0' distL='0' distR='0'><wp:extent cx='${cx}' cy='${cy}'/><wp:docPr id='${k}' name='chart${k}'/><a:graphic xmlns:a='http://schemas.openxmlformats.org/drawingml/2006/main'><a:graphicData uri='http://schemas.openxmlformats.org/drawingml/2006/picture'><pic:pic xmlns:pic='http://schemas.openxmlformats.org/drawingml/2006/picture'><pic:nvPicPr><pic:cNvPr id='${k}' name='chart${k}.png'/><pic:cNvPicPr/></pic:nvPicPr><pic:blipFill><a:blip r:embed='rId${k+10}'/><a:stretch><a:fillRect/></a:stretch></pic:blipFill><pic:spPr><a:xfrm><a:off x='0' y='0'/><a:ext cx='${cx}' cy='${cy}'/></a:xfrm><a:prstGeom prst='rect'><a:avLst/></a:prstGeom></pic:spPr></pic:pic></a:graphicData></a:graphic></wp:inline></w:drawing></w:r></w:p>`};
+function mkDocx(body,im){const H="<?xml version='1.0' encoding='UTF-8' standalone='yes'?>",RT='http://schemas.openxmlformats.org/officeDocument/2006/relationships',WN='http://schemas.openxmlformats.org/wordprocessingml/2006/main';
+return zip([{name:'[Content_Types].xml',data:H+`<Types xmlns='http://schemas.openxmlformats.org/package/2006/content-types'><Default Extension='rels' ContentType='application/vnd.openxmlformats-package.relationships+xml'/><Default Extension='xml' ContentType='application/xml'/><Default Extension='png' ContentType='image/png'/><Override PartName='/word/document.xml' ContentType='application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml'/><Override PartName='/word/styles.xml' ContentType='application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml'/></Types>`},
+{name:'_rels/.rels',data:H+`<Relationships xmlns='http://schemas.openxmlformats.org/package/2006/relationships'><Relationship Id='rId1' Type='${RT}/officeDocument' Target='word/document.xml'/></Relationships>`},
+{name:'word/_rels/document.xml.rels',data:H+`<Relationships xmlns='http://schemas.openxmlformats.org/package/2006/relationships'><Relationship Id='rId1' Type='${RT}/styles' Target='styles.xml'/>`+im.map((_,i)=>`<Relationship Id='rId${i+11}' Type='${RT}/image' Target='media/image${i+1}.png'/>`).join('')+'</Relationships>'},
+{name:'word/styles.xml',data:H+`<w:styles xmlns:w='${WN}'><w:docDefaults><w:rPrDefault><w:rPr><w:rFonts w:ascii='Tahoma' w:hAnsi='Tahoma' w:cs='Tahoma'/><w:sz w:val='22'/><w:szCs w:val='22'/><w:lang w:val='en-US' w:bidi='fa-IR'/></w:rPr></w:rPrDefault></w:docDefaults></w:styles>`},
+{name:'word/document.xml',data:H+`<w:document xmlns:w='${WN}' xmlns:r='${RT}' xmlns:wp='http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing'><w:body>${body}<w:sectPr><w:pgSz w:w='11906' w:h='16838'/><w:pgMar w:top='850' w:right='850' w:bottom='850' w:left='850' w:header='400' w:footer='400' w:gutter='0'/><w:bidi/></w:sectPr></w:body></w:document>`},
+...im.map((p,i)=>({name:`word/media/image${i+1}.png`,data:p.b}))])}
+const ft=(a,b,d)=>`${fx(a,d)} (${fx(b,d)})`,STF=['D3F9D8','FFE8CC','FFC9C9'];
+function nrows(mv,ix,who){const rs=[['مقیاس',who,'بیماران سرپایی','عادی (۱)','عادی (۲)','z از عادی (۱)']],zc=z=>({t:fx(z,1),b:z>=2,c:z>=2?'E03131':undefined});
+F.forEach((f,k)=>{const n=NORM[k];rs.push([f.s,fx(mv[k]),ft(n[0],n[1],2),ft(n[2],n[3],2),ft(n[4],n[5],2),zc((mv[k]-n[2])/n[3])])});
+[['GSI','gsi',2],['PSDI','psdi',2],['PST','pst',1]].forEach(([nm,k,d])=>{const n=NI[k];rs.push([nm,fx(ix[k],d),ft(n[0],n[1],d),ft(n[2],n[3],d),ft(n[4],n[5],d),nm==='PSDI'?'—':zc((ix[k]-n[2])/n[3])])});return rs}
+const NW=[1700,1500,1900,1700,1700,1700];
+async function buildWordGroup(){const g=GS(),im=[],ad=async s=>{im.push(await svgPng(s));return im.length},cf=g.cf,m9=g.fv.map(mean),n=g.n,ts=[...Array(Math.min(n,6)+1).keys()].map(i=>Math.round(i*n/Math.min(n,6))),gs=T.map(t=>t.r.gsi),gm=Math.max(1,Math.ceil(Math.max(...gs)*2)/2),tk=[];for(let x=0;x<=gm+.01;x+=.5)tk.push(x);
+const sv=s=>s.slice(s.indexOf('<svg'),s.indexOf('</svg>')+6);
+let b=P('گزارش گروهی آزمون SCL-90-R',{b:1,s:40,c:'6C4CF1',j:'center',sa:40})+P(`تاریخ: ${new Date().toLocaleDateString('fa-IR')}   |   تعداد آزمودنی: ${fa(n)}`,{j:'center'})+P('طراح نرم‌افزار: دریا نجاتی راد',{j:'center',c:'6B6591',s:20});
+b+=HD('خلاصه')+TB([['تعداد آزمودنی','میانگین GSI','میانگین PST','میانگین PSDI','بالاتر از خط برش GSI'],[fa(n),fx(mean(gs)),fx(mean(T.map(t=>t.r.pst)),1),fx(mean(T.map(t=>t.r.psdi))),fa(T.filter(t=>t.r.gsi>=cv('cg')).length)]],[2000,2000,2000,2000,2200]);
+b+=HD('میانگین نه عامل در گروه')+TB([['عامل','میانگین گروه','انحراف معیار','کمترین','بیشترین','خط برش','تعداد بالاتر از برش','درصد'],...g.fr.map(r=>[r.f.n,{t:fx(r.m),b:1,f:r.m>=cf?'FFC9C9':undefined},fx(r.sd),fx(r.mn),fx(r.mx),fx(cf,1),fa(r.c),fa(Math.round(r.c/n*100))+'٪']),...g.ir.map(r=>[{t:r.nm,b:1},{t:fx(r.m,r.d),b:1},fx(r.sd,r.d),fx(r.mn,r.d),fx(r.mx,r.d),fx(r.cut),fa(r.c),fa(Math.round(r.c/n*100))+'٪'])],[2800,1100,1100,900,900,900,1500,900]);
+let k=await ad(fcol(m9,'میانگین گروه'));b+=HD('نمودارها')+IMG(k,im[k-1],15)+P('میانگین هر عامل در گروه. خط‌چین قرمز، خط برش است.',{j:'center',c:'6B6591',s:18});
+k=await ad(rad9(m9,cf));b+=IMG(k,im[k-1],13)+P('پروفایل راداری گروه',{j:'center',c:'6B6591',s:18});
+k=await ad(col({v:g.fr.map(r=>r.c),l:F.map(f=>f.s),c:F.map(f=>f.c),max:Math.max(1,n),tk:ts,f:fa,t:'تعداد افراد بالاتر از خط برش'}));b+=IMG(k,im[k-1],15)+P('تعداد افراد بالاتر از خط برش در هر عامل',{j:'center',c:'6B6591',s:18});
+k=await ad(col({v:gs,l:T.map(t=>(t.D.nm||'—').slice(0,10)),c:gs.map(v=>v>=cv('cg')?'#ff5fa2':'#12b886'),max:gm,tk,cut:cv('cg'),cl:'خط برش '+fx(cv('cg')),t:'GSI هر آزمودنی'}));b+=IMG(k,im[k-1],15)+P('GSI هر آزمودنی (صورتی: بالاتر از خط برش)',{j:'center',c:'6B6591',s:18});
+b+=PB+HD('مقایسه با هنجارهای منبع')+TB(nrows(m9,{gsi:mean(gs),psdi:mean(T.map(t=>t.r.psdi)),pst:mean(T.map(t=>t.r.pst))},'گروه'),NW)+P('در ردیف PSDI میانگین گروه‌های عادی منبع کمتر از ۱ است که از نظر محاسبه ممکن نیست، پس برای آن z گزارش نشده است. اعداد هنجار را با کتاب منبع تطبیق دهید.',{c:'6B6591',s:18});
+k=await ad(gcol(m9,'گروه'));b+=IMG(k,im[k-1],15)+P('بنفش: گروه | قرمز: بیماران سرپایی | سبز: عادی (۱) | آبی: عادی (۲)',{j:'center',c:'6B6591',s:18});
+b+=HD('جدول آزمودنی‌ها')+TB([['نام','سن','جنسیت','GSI','PST','PSDI','تعداد عامل بالاتر از برش'],...T.map(t=>[t.D.nm||'—',t.D.ag?fa(t.D.ag):'—',t.D.gn||'—',{t:fx(t.r.gsi),f:t.r.gsi>=cv('cg')?'FFE8CC':undefined},fa(t.r.pst),fx(t.r.psdi),fa(t.r.fs.filter(f=>f.mean>=cf).length)])],[2600,800,1100,1100,1000,1100,2400]);
+b+=HD('میانگین عامل‌ها به تفکیک آزمودنی')+TB([['نام',...F.map(f=>f.s)],...T.map(t=>[t.D.nm||'—',...t.r.fs.map(f=>({t:fx(f.mean),f:f.mean>=cf?'FFC9C9':undefined,s:16}))])],[1700,...F.map(()=>830)]);
+b+=P('طراح و سازنده نرم‌افزار: دریا نجاتی راد',{j:'center',c:'6B6591',s:18,sb:300});
+return mkDocx(b,im)}
+async function buildWordPerson(i){const t=T[i],r=t.r,d=t.D,cf=cv('cf'),im=[],ad=async s=>{im.push(await svgPng(s));return im.length},m9=r.fs.map(f=>f.mean),hi=r.fs.filter(f=>f.mean>=cf),g=x=>x||'—';
+let b=P('گزارش فردی آزمون SCL-90-R',{b:1,s:40,c:'6C4CF1',j:'center',sa:40})+P('طراح نرم‌افزار: دریا نجاتی راد',{j:'center',c:'6B6591',s:20});
+b+=HD('مشخصات')+TB([['نام','سن','جنسیت','تحصیلات','تأهل','پایه / کلاس'],[g(d.nm),d.ag?fa(d.ag):'—',g(d.gn),g(d.ed),g(d.ms),g(d.jb)],['تاریخ اجرا',g(d.dt),'','','','']],[1900,1100,1300,2000,1900,1900]);
+b+=HD('شاخص‌های کلی')+TB([['شاخص','نمره','خط برش','وضعیت','معنا'],...[['GSI (شاخص علائم کلی)',r.gsi,'cg',2,'مجموع نمره ۹۰ سؤال ÷ ۹۰'],['PST (جمع علائم مثبت)',r.pst,'cp',0,'تعداد سؤال‌های با پاسخ غیرصفر'],['PSDI (ضریب ناراحتی)',r.psdi,'cd',2,'مجموع نمره‌ها ÷ PST']].map(x=>{const s=ist(x[1],x[2]);return [x[0],{t:fx(x[1],x[3]===0?0:2),b:1},fx(cv(x[2])),{t:STL[s],f:STF[s]},x[4]]})],[2900,1200,1200,2300,2600]);
+b+=HD('نه عامل آزمون')+TB([['عامل','تعداد سؤال','مجموع نمره','میانگین','خط برش','وضعیت'],...r.fs.map(f=>{const s=fst(f.mean);return [f.n,fa(f.k),fa(f.sum),{t:fx(f.mean),b:1},fx(cf,1),{t:STL[s],f:STF[s]}]}),['سؤال‌های اضافی (در GSI لحاظ می‌شوند)',fa(7),fa(r.add),fx(r.add/7),'—','—']],[3200,1200,1300,1100,1000,2400]);
+let k=await ad(fcol(m9,'میانگین نه عامل'));b+=HD('نمودارها')+IMG(k,im[k-1],15)+P('میانگین هر عامل. خط‌چین قرمز، خط برش است.',{j:'center',c:'6B6591',s:18});
+k=await ad(rad9(m9,cf));b+=IMG(k,im[k-1],13)+P('پروفایل راداری',{j:'center',c:'6B6591',s:18});
+b+=PB+HD('مقایسه با هنجارهای منبع')+TB(nrows(m9,r,'فرد'),NW)+P('در ردیف PSDI میانگین گروه‌های عادی منبع کمتر از ۱ است که از نظر محاسبه ممکن نیست، پس برای آن z گزارش نشده است. اعداد هنجار را با کتاب منبع تطبیق دهید.',{c:'6B6591',s:18});
+k=await ad(gcol(m9,'فرد'));b+=IMG(k,im[k-1],15)+P('بنفش: فرد | قرمز: بیماران سرپایی | سبز: عادی (۱) | آبی: عادی (۲)',{j:'center',c:'6B6591',s:18});
+b+=HD('تفسیر')+P((hi.length?`میانگین فرد در ${fa(hi.length)} عامل از ۹ عامل برابر یا بالاتر از ${fx(cf,1)} است: `+hi.map(f=>f.n+' ('+fx(f.mean)+')').join('، ')+'. '+(r.fs.some(f=>f.mean>=3)?'در عامل‌هایی با میانگین ۳ یا بیشتر، مشکل فرد در ارتباط با آن اختلال جدی تلقی می‌شود. ':''):`میانگین فرد در هیچ‌یک از نه عامل به خط برش ${fx(cf,1)} نرسیده است. `)+`شاخص GSI برابر ${fx(r.gsi)} است و ${r.gsi>=cv('cg')?'بالاتر از':'پایین‌تر از'} خط برش ${fx(cv('cg'))} قرار دارد.`)+P('این آزمون غربالگری است و تشخیص نیست. نتیجه باید همراه با مصاحبه بالینی تفسیر شود.',{c:'6B6591',s:18});
+b+=PB+HD('پاسخ تک‌تک سؤال‌ها')+TB([['#','سؤال','پاسخ','نمره','عامل'],...r.a.map((v,j)=>[fa(j+1),{t:Q[j],s:16},OPT[v],fa(v),FM[j+1].s])],[600,5400,1300,700,1900]);
+b+=P('طراح و سازنده نرم‌افزار: دریا نجاتی راد',{j:'center',c:'6B6591',s:18,sb:300});
+return mkDocx(b,im)}
+async function exportWord(i){if(!T.length)return;msg('در حال ساخت فایل Word. چند ثانیه صبر کنید…');try{const by=i<0?await buildWordGroup():await buildWordPerson(i);dl(by,i<0?'SCL90_group.docx':'SCL90_person_'+(i+1)+'.docx','application/vnd.openxmlformats-officedocument.wordprocessingml.document');msg('فایل Word ساخته شد.',2500)}catch(e){msg('ساخت Word ناموفق بود: '+e.message,5000)}}
+/* --- PDF (از طریق چاپ مرورگر) --- */
+function pdf(i){document.body.classList.add(i<0?'pg':'pp');setTimeout(()=>window.print(),80)}
+window.addEventListener('afterprint',()=>document.body.classList.remove('pg','pp'));
+
+$('an').onclick=an;['cf','cg','cp','cd'].forEach(id=>$(id).onchange=()=>{if(T.length)an()});
+$('tm').onclick=()=>{if(!$('tp').classList.contains('hide')){location.reload();return}
+$('stu').classList.add('hide');$('tp').classList.remove('hide');$('tm').textContent='بازگشت به آزمون';
+try{$('codes').value=localStorage.getItem('sclCodes')||''}catch(e){}if($('codes').value.trim())an()};
+go(0);
+if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
+</script>
+</body>
+</html>
